@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pago exitoso — Piraña</title>
+<link rel="stylesheet" href="css/variables.css" />
+<link rel="stylesheet" href="css/base.css" />
+<style>
+    body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    }
+    .result {
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    }
+    .result__icon { font-size: 4rem; }
+    .result__title { font-size: 2rem; font-weight: 700; color: var(--gld-light); }
+    .result__text { opacity: 0.8; max-width: 380px; line-height: 1.6; }
+    .result__btn {
+    margin-top: 8px;
+    padding: 12px 28px;
+    background-color: var(--gld-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    }
+    .result__btn:hover {
+    background-color: var(--gld-light);
+    color: #111;
+    transform: translateY(-2px);
+    }
+</style>
+</head>
+<body>
+    <div class="result">
+        <div class="result__icon">✅</div>
+        <h1 class="result__title">¡Pago exitoso!</h1>
+        <p class="result__text">Tu gift card fue procesada correctamente. En breve recibís la confirmación.</p>
+        <a href="/" class="result__btn">Volver al inicio</a>
+    </div>
+</body>
+</html>
