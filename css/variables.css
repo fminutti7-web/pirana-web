@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div, ul, nav, header, footer, a, li, label, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    --bg-color: #1A1A1A;
+    --text-color: #f5f0e8;
+    --white-color: #F5F0E8;
+    --dark-color: #4A4A4A;
+    --gld-color: #B8941F;
+    --red-accent: #8C1C1C;
+    --gld-light: #D4AF31;
+    --gld-dark: #bb7002;
+    --green-color: #354f10;
+    --logo-pulse: #FD961E;
+}
+
+/* ------MODO BARBERÍA------ */
+
+.mode-barberia {
+    --bg-color: #2A2A2A;
+    --text-color: #F5F0E8;
+    --white-color: #F5F0E8;
+    --dark-color: #4A4A4A;
+    --gld-color: #FD961E;
+    --gld-light: #FFB347;
+    --gld-dark: #C97000;
+    --red-accent: #8C1C1C;
+    --green-color: #354f10;
+    --nav-bg: #FD961E;  
+    --burger-color: #000;  
+    --header-bg: #FD961E;
+    --logo-pulse: #111111;  
+}

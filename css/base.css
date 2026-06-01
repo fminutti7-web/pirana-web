@@ -1,0 +1,128 @@
+html {
+    overflow-x: hidden;
+
+}
+
+
+/* ------SCROLL INDICATOR------ */
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    z-index: 2;
+    opacity: 0.8;
+    animation: scrollFall 2.5s ease-in-out infinite;
+}
+
+.scroll-indicator__arrow {
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+@keyframes scrollFall {
+    0% {
+        transform: translateY(-15px) rotate(-5deg);
+        opacity: 0;
+    }
+    30% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    70% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(15px) rotate(5deg);
+        opacity: 0;
+    }
+}
+
+/* ------WHATSAPP FLOAT------ */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0px 0px 4px #0e0);
+    z-index: 100;
+    transition: all .3s ease;
+    user-select: none;
+}
+
+.whatsapp-float img {
+    width: 60px;
+    height: 60px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 6px 20px #25d366);
+}
+
+.whatsapp-float::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #25d366;
+    z-index: -1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(.8);
+        opacity: .7;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0;
+    }
+}
+
+/* ------ANIMATIONS------ */
+
+.profile__card,
+.portfolio__item,
+.location__block,
+.cta__container,
+.cta-turno,
+.banner__separador,
+.profile__heading,
+.location__heading,
+.footer__col {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.profile__card.visible,
+.portfolio__item.visible,
+.location__block.visible,
+.cta__container.visible,
+.cta-turno.visible,
+.banner__separador.visible,
+.profile__heading.visible,
+.location__heading.visible,
+.footer__col.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+

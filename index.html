@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piraña tattoo Studio</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header__logo-container">
+            <a href="barberia.html" class="header__logo-link">
+            <img class="header__logo" src="asset/tattoo-studio.png">
+            </a>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li><a href="#home" id="">Home</a></li>
+                <li><a href="#Portfolio" id="">Gallery</a></li>
+                <li><a href="#profile" id="">About</a></li>
+                <li><a href="#contact" id="">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="header__burger" aria-expanded="false"    aria-label="Abrir menú">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+        </button>
+    </header>
+    <main>
+        <section class="hero" id="Hero">
+            <div class="hero__container">
+                <div class="hero__title-container">
+                    <h1 class="hero__title">Tatuaje tradicional Japonés</h1>
+                    <div class="hero__text">
+                        <p> Estudio de tatuaje profesional en Avellaneda, Santa Fe. Diseños únicos en cada piel.
+                        </p>
+                    </div>  
+                </div>
+                <div class="hero__form" id="contact">
+                        <div class="hero__form-box">
+                        <h3 class="form__title">Dejanos tu consulta</h3>
+                        <form  class="form-box">
+                            <div class="form__input-container">
+                                <input type="text"  name="nombre"  placeholder="John Dolery"  required>
+                            </div>
+                            <div class="form__input-container">
+                                <input type="email" name="email"   placeholder="email@example.com" required>
+                            </div>
+                            <div class="form__input-container">
+                                <label>Mensaje
+                                <textarea           name="mensaje" placeholder="Deja tu mensaje"   required></textarea>
+                                </label>
+                            </div>
+                            <div class="form__input-container">
+                            <input type="submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <a href="#profile" class="scroll-indicator">
+        <span class="scroll-indicator__arrow">↓</span>
+        <span class="scroll-indicator__text">Scroll down</span>
+        </a>
+        </section>
+        <section class="profile" id="profile">
+            <div class="profile__heading">
+                <h2 class="profile__title">El legado Piraña</h2>
+                <p class="profile__subtitle">Arte y tradición en cada trabajo, de padre a hijo.</p>
+            </div>
+            <div class="profile__wrapper">
+                <article class="profile__card">
+                    <img src="asset/profile.png" alt="Esteban Ferreyra" class="profile__img">
+                    <div class="profile__overlay">
+                        <span class="profile__credential">Tatuador</span>
+                        <h2 class="profile__name">Esteban Ferreyra</h2>
+                        <p class="profile__description">17 años de oficio. Especialista en tatuaje estilo tradicional japonés, diseñando 
+                        cada pieza única en colaboración con la persona quien la lleva.</p>
+                    </div>
+                </article>
+                <article class="profile__card">
+                    <img src="asset/piraña-dad.png" alt="Hugo Piraña Ferreyra" class="profile__img">
+                    <div class="profile__overlay">
+                        <h2 class="profile__name">Hugo "Piraña" Ferreyra</h2>
+                        <h3></h3>
+                        <p class="profile__description">(VGM) Veterano Guerra Malvinas, perteneció al GOE (grupo operaciones especiales). Miembro fundador Brigada Paracaidismo Reconquista. Nacido en Mercedes-Buenos Aires. Radicado en Reconquista-Santa Fe.Imagen-símbolo del combatiente de Malvinas.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <div class="banner__separador">
+                <div class="banner__separador-decoration"></div>
+        </div>
+        <section class="portfolio" id="portfolio">
+            <div class="portfolio__container">
+                <div class="portfolio__heading">
+                    <h2 class="portfolio__title">Estudio Piraña</h2>
+                    <p class="portfolio__subtitle">
+                        Legado familiar de tradición y arte en Reconquista, Avellaneda y zona.
+                    </p>
+                </div>
+                <div class="portfolio__grid">
+                    <div class="portfolio__item">
+                        <img src="asset/feature.png" alt="" loading="lazy">
+                    </div>
+                    <div class="portfolio__item">
+                        <img src="asset/feature2.png" alt="" loading="lazy">
+                    </div>
+                    <div class="portfolio__item">
+                        <img src="asset/feature3.jpeg" alt="" loading="lazy">
+                    </div>
+                    <div class="portfolio__item">
+                        <img src="asset/work1.jpeg" alt="" loading="lazy">
+                    </div>
+                    <div class="portfolio__item">
+                        <img src="asset/ work2.jpeg" alt="" loading="lazy">
+                    </div>
+                    <div class="portfolio__item">
+                        <img src="asset/work3.jpeg" alt="" loading="lazy">
+                    </div>
+                    <div class="portfolio__item">
+                        <img src="asset/work4.jpeg" alt="" loading="lazy">
+                    </div>
+                    <div class="portfolio__item">
+                        <img src="asset/work5.jpeg" alt="" loading="lazy">
+                    </div>
+                    <div class="portfolio__item">
+                        <img src="asset/work6.jpeg" alt="" loading="lazy">
+                    </div>
+                    <div class="portfolio__item">
+                        <img src="asset/work7.jpeg" alt="" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="banner__separador">
+            <div class="banner__separador-decoration"></div>
+        </div>
+        <section class="cta cta--tattoo">
+            <div class="cta__container">
+                <h2 class="cta__title">¿Listo para tu próximo tatuaje?</h2>
+                <p class="cta__text">
+                    Consultanos por tu diseño. Te asesoramos sin compromiso.
+                </p>
+                <a href="https://wa.me/5493482685063" class="cta__button" target="_blank" rel="noopener">
+            Hablemos por WhatsApp
+        </a>
+            </div>
+        </section>
+    </main>
+    <section class="location">
+    <div class="location__container">
+        <div class="location__map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3485.7724008660402!2d-59.6561!3d-29.1124!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944eba757b3da221%3A0x5c8b76928c435b2d!2sC.%201%20648%2C%20S3561%20Avellaneda%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1779924928954!5m2!1ses!2sar" 
+                allowfullscreen 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación de Piraña Tattoo Studio">
+            </iframe>
+        </div>
+        <div class="location__info">
+            <h2 class="location__title">Encontranos</h2>
+            <p class="location__subtitle">
+                Estamos en el corazón de Avellaneda, fácil acceso desde Reconquista y alrededores.
+            </p>
+            <div class="location__details">
+                <div class="location__detail">
+                    <span class="location__label">Dirección</span>
+                    <p>Calle 1 N° 648<br>Avellaneda, Santa Fe</p>
+                </div>
+
+                <div class="location__detail">
+                    <span class="location__label">Horarios</span>
+                    <p>Mañana: 10:00 - 12:20<br>Tarde: 17:00 - 20:00</p>
+                </div>
+            </div>
+            <div class="location__actions">
+                <a href="https://maps.app.goo.gl/N1JHyycpz7MnT233A" 
+                class="location__btn location__btn--primary" 
+                target="_blank" rel="noopener">
+                    Cómo llegar
+                </a>
+                <a href="https://wa.me/5493482685063" 
+                class="location__btn location__btn--secondary" 
+                target="_blank" rel="noopener">
+                    Coordinar visita
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer class="footer" id="footer">
+    <div class="footer__container">
+        <div class="footer__col footer__col--brand">
+            <img src="asset/tattoo-studio.png" alt="Piraña Tattoo Studio" class="footer__logo">
+            <p class="footer__tagline">
+                Estudio de tatuajes y arte tradicional en Avellaneda, Santa Fe.
+            </p>
+        </div>
+        <div class="footer__col">
+            <h3 class="footer__title">Navegación</h3>
+            <ul class="footer__list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Gallery</a></li>
+                <li><a href="#profile">About</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <h3 class="footer__title">Seguinos</h3>
+            <div class="footer__social">
+                <a href="https://instagram.com/tattoo_peluqueria__pirania/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://wa.me/5493482685063" target="_blank" rel="noopener">WhatsApp</a>
+                <a href="https://tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>© 2026 Piraña Tattoo Studio. Todos los derechos reservados.</p>
+    </div>
+</footer>
+    <a href="https://wa.me/5493482685063?text=Hola%20Esteban%2C%20me%20interesa%20hacerme%20un%20tatuaje" 
+    class="whatsapp-float" 
+    target="_blank" 
+    rel="noopener"
+    aria-label="Contactar por WhatsApp">
+        <img src="asset/WhatsApp_icon.png" alt="WhatsApp">
+    </a>
+    <script src="js/menu.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

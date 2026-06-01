@@ -1,0 +1,350 @@
+/* ------HEADER------ */
+
+.header {
+    background-color: var(--header-bg, #000);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    container-type: inline-size;
+    container-name: header;
+    position: sticky;
+    z-index: 10;
+    font-size: 20px;
+    top: 0;
+    padding: 0 15px;
+}
+
+.header__logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    max-width: 100%;
+    width: 64px;
+    margin: 10px 0;
+}
+
+.header__nav {
+    background-color: var(--nav-bg, #000);
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+
+}
+
+.header__nav.active {
+    max-height: 100vh;
+}
+
+.header__nav-list {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    margin: auto;
+    justify-content: space-evenly;
+    text-align: center;
+    list-style: none;
+}
+
+.header__nav-list a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all .3s ease;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.header__nav-list a:hover {
+    color: var(--gld-light);
+    transform: scale(1.2);
+    letter-spacing: 2px;
+}
+
+.header__logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-link .header__logo {
+    animation: logoGlow 2.5s ease-in-out infinite;
+    transition: opacity 0.3s ease;
+}
+
+.header__logo-link:hover .header__logo {
+    opacity: 0.85;
+}
+
+@keyframes logoGlow {
+    0%, 100% {
+        filter: drop-shadow(0px 0px 4px transparent);
+    }
+    50% {
+        filter: drop-shadow(0px 0px 14px var(--logo-pulse, #FD961E));
+    }
+}
+
+/* ------BURGER------ */
+
+.header__burger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 20;
+    /* sin position absolute — el flex del header lo ubica */
+}
+
+.header__burger-line {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: var(--burger-color, var(--gld-color)); /* fallback dorado para tattoo */
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+.header__burger.active .header__burger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.header__burger.active .header__burger-line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.header__burger.active .header__burger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ------HEADER DESKTOP------ */
+
+@media (min-width: 600px) {
+    .header__burger {
+        display: none;
+    }
+
+    .header__nav {
+        position: static;
+        display: flex;
+        height: auto;
+        width: auto;
+        max-height: none;
+        overflow: visible;
+        opacity: 1;
+        pointer-events: all;
+        background-color: transparent;
+        z-index: auto;
+        transition: none;
+    }
+
+    .header__nav-list {
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        gap: 15px;
+        margin-right: 40px;
+        margin-left: 20px;
+    }
+
+    .header__logo-container {
+        width: 100px;
+        height: 100px;
+        padding: 10px 2px;
+    }
+
+    .header__logo {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+}
+
+/* ------CTA------ */
+
+.cta {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* Tattoo — index.html */
+.cta--tattoo {
+    background: linear-gradient(#000a, #0008), url(../asset/tattoofoo.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Barbería — barberia.html */
+.cta--barberia {
+    background: linear-gradient(#000a, #0008), url(../asset/barber-hero.avif);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.cta__container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta__title {
+    font-size: 2.4rem;
+    color: var(--gld-color);
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    text-wrap: balance;
+}
+
+.cta__text {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+}
+
+.cta__button {
+    display: inline-block;
+    padding: 16px 40px;
+    color: var(--white-color);
+    background-color: #25d366;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all .3s ease;
+}
+
+.cta__button:hover {
+    transform: translateY(-3px);
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .cta {
+        background-attachment: scroll;
+        background-size: cover;
+    }
+}
+
+
+
+/* ------FOOTER------ */
+
+.footer {
+    background-color: #000;
+    color: var(--text-color);
+    padding: 40px 60px 0;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "brand brand"
+        "nav social";
+    gap: 30px 40px;
+    padding-bottom: 40px;
+}
+
+.footer__col--brand {
+    grid-area: brand;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__col:nth-child(2) { grid-area: nav; }
+.footer__col:nth-child(3) { grid-area: social; }
+
+.footer__logo {
+    width: 80px;
+    margin-bottom: 12px;
+    filter: grayscale(100%);
+}
+
+.footer__tagline {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.8;
+    max-width: 320px;
+    text-wrap: balance;
+}
+
+.footer__title {
+    color: var(--gld-light);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.footer__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__list a,
+.footer__social a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    transition: all 0.3s ease;
+}
+
+.footer__list a:hover,
+.footer__social a:hover {
+    color: var(--gld-light);
+    opacity: 1;
+}
+
+.footer__social {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__bottom {
+    border-top: 2px solid var(--gld-color);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer__bottom p {
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+    .footer__container {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas: "brand nav social";
+        gap: 60px;
+    }
+
+    .footer__col--brand {
+        text-align: left;
+        align-items: flex-start;
+    }
+}
