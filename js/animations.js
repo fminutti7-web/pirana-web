@@ -15,6 +15,9 @@ const observer = new IntersectionObserver((entries) => {
 
 animatedElements.forEach((el, index) => {
     // Delay escalonado automático según posición en el DOM
+    if (el.closest('.header')) return;
+    
     el.style.transitionDelay = `${index * 0.05}s`;
     observer.observe(el);
 });
+
