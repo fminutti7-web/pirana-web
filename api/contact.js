@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     try {
         await resend.emails.send({
             from: 'Piraña Web <onboarding@resend.dev>',
-            to: 'francominutti@gmail.com', // ← tu email para recibir los mensajes
+            to: 'fminutti7@gmail.com', // ← tu email para recibir los mensajes
             subject: `Nueva consulta de ${nombre}`,
             html: `
                 <h2>Nueva consulta desde la web</h2>
