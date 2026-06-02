@@ -18,6 +18,9 @@
             <a href="barberia.html" class="header__logo-link">
             <img class="header__logo" src="asset/tattoo-studio.png">
             </a>
+            <a href="barberia.html" class="header__switch">
+                ← Barbería
+            </a>
         </div>
         <nav class="header__nav">
             <ul class="header__nav-list">
@@ -272,6 +275,28 @@
     aria-label="Contactar por WhatsApp">
         <img src="asset/WhatsApp_icon.png" alt="WhatsApp">
     </a>
+    <!-- MODAL GIFT CARD -->
+<div class="gc-modal" id="gcModal">
+        <div class="gc-modal__overlay"></div>
+        <div class="gc-modal__box">
+    <button class="gc-modal__close">✕</button>
+    <h3 class="gc-modal__titulo">Gift Card</h3>
+    <p class="gc-modal__precio">$50.000</p>
+    <div class="gc-modal__form">
+            <label class="gc-modal__label">Para (opcional)
+                <input class="gc-modal__input" type="text" name="destinatario" placeholder="Nombre de quien recibe">
+            </label>
+            <label class="gc-modal__label">
+                Mensaje (opcional)
+                <textarea class="gc-modal__textarea" name="mensaje" placeholder="Escribí un mensaje personal..."></textarea>
+            </label>
+        </div>
+        <div class="gc-modal__actions">
+            <button class="gc-modal__cancelar">Cancelar</button>
+            <button class="gc-modal__pagar">Ir al pago →</button>
+        </div>
+    </div>
+</div>
     <script src="js/menu.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/form.js"></script>
