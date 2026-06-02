@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Genty';
+    src: url('../fonts/GentyDemo-Regular.ttf') format('truetype');
+}
+
 html {
     overflow-x: hidden;
 
