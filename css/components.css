@@ -472,6 +472,11 @@ filter: drop-shadow(0 0 10px #3339);
     filter: drop-shadow(0 8px 24px #0009);
 }
 
+.gift-card__character::before {
+    content: '';
+}
+
+
 .gift-card__bottom {
 position: relative;
 z-index: 2;
@@ -482,13 +487,13 @@ width: 100%;
 }
 
 .gift-card__name {
-    font-size: 4.5rem;
+    font-size: clamp(3.5rem, 11vw, 4.5rem);
     text-align: center;
     font-weight: 900;
     font-family: 'Genty', cursive;
     width: 100%;
-    letter-spacing: 5px;
-    margin-bottom: -40px;
+    letter-spacing: clamp(1px, 2vw, 5px);
+    margin-bottom: -35px;
     background: linear-gradient(90deg, #fff, var(--gld-light), #fff, var(--gld-light), #fff);
     background-size: 300% 100%;
     -webkit-background-clip: text;
@@ -515,7 +520,25 @@ font-family: inherit;
 font-weight: 600;
 letter-spacing: 1px;
 cursor: pointer;
-transition: all 0.3s ease;
+transition: all 0.6s ease;
+position: relative;
+overflow: hidden;
+}
+
+.gift-card__btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 60px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #ffffff55, transparent);
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+}
+
+.gift-card__btn:hover::before {
+    left: 110%;
 }
 
 .gift-card__btn:hover {
